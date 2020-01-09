@@ -1,13 +1,14 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:carousel_pro/carousel_pro.dart';
-
-
+import 'package:flutter/services.dart';
 
 //My Own Imports
 import 'package:delivery_app/components/horizontal_listview.dart';
+import 'package:delivery_app/components/products.dart';
 
 void main() {
+
   runApp(MaterialApp(
     home: Homepage(),
     debugShowCheckedModeBanner: false,
@@ -23,7 +24,7 @@ class _HomepageState extends State<Homepage> {
   @override
   Widget build(BuildContext context) {
     Widget image_carousel = new Container(
-      height: 200.0,
+      height: 180.0,
       child: new Carousel(
         boxFit: BoxFit.cover,
         images: [
@@ -149,15 +150,59 @@ class _HomepageState extends State<Homepage> {
       ),
       body: new ListView(
         //Image Carousel
-        children: <Widget>[image_carousel,
-        //Padding
-        new Padding(padding: const EdgeInsets.all(8.0),
-        child: new Text('Categories'),
-        ),
+        children: <Widget>[
+          image_carousel,
+          //Padding
+          new Padding(
+            padding: const EdgeInsets.all(16.0),
+            child: new Text('Categories'),
+          ),
           //Horizontal List view Begins Here
+          HorizontaList(),
 
+          //Padding
+          new Padding(padding: const EdgeInsets.all(20.0),
+          child: new Text('Recent Products',),
+          ),
+          Container(
+            height: 320.0,
+            child: Products(),
+          ),
         ],
+      ),
+    );
+  }
+}
 
+class Category extends StatelessWidget {
+  final String image_location;
+  final String image_caption;
+
+  Category({
+    this.image_location,
+    this.image_caption,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: Container(
+        width: 100.0,
+        child: InkWell(
+          onTap: () {},
+          child: ListTile(
+            title: Image.asset(
+              image_location,
+              width: 100.0,
+              height: 80.0,
+            ),
+            subtitle: Container(
+              alignment: Alignment.topCenter,
+              child: Text(image_caption),
+            ),
+          ),
+        ),
       ),
     );
   }
