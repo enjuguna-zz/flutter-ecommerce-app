@@ -37,26 +37,26 @@ class _HomepageState extends State<Homepage> {
         animationCurve: Curves.fastOutSlowIn,
         animationDuration: Duration(milliseconds: 1000),
         dotSize: 4.0,
-        dotColor: Colors.red,
+        dotColor: Colors.white,
         indicatorBgPadding: 5.0,
       ),
     );
     return Scaffold(
       appBar: new AppBar(
         elevation: 0.1,
-        title: Text('Bubble'),
-        backgroundColor: Colors.red,
+        title: Text('Bubble', style: TextStyle(color: Colors.red),),
+        backgroundColor: Colors.black,
         actions: <Widget>[
           new IconButton(
               icon: Icon(
                 Icons.search,
-                color: Colors.white,
+                color: Colors.red,
               ),
               onPressed: () {}),
           new IconButton(
               icon: Icon(
                 Icons.shopping_cart,
-                color: Colors.white,
+                color: Colors.red,
               ),
               onPressed: () {})
         ],
@@ -77,7 +77,7 @@ class _HomepageState extends State<Homepage> {
                   ),
                 ),
               ),
-              decoration: new BoxDecoration(color: Colors.red),
+              decoration: new BoxDecoration(color: Colors.black),
             ),
 
             //body
@@ -165,7 +165,7 @@ class _HomepageState extends State<Homepage> {
           child: new Text('Recent Products',),
           ),
           Container(
-            height: 320.0,
+            height: 350.0,
             child: Products(),
           ),
         ],

@@ -50,6 +50,12 @@ flutter:
   - images/Cats/beer.png
   - images/Cats/shakes.png
   - images/Cats/wine.png
+  - images/Products/cherry-vanilla.jpg
+  - images/Products/tilia.jpg
+  - images/Products/tusker.jpg
+  - images/Products/smores.jpg
+  - images/Products/hen.png
+  - images/Products/summit.jpg
 
 
   # An image asset can refer to one or more resolution-specific "variants", see
