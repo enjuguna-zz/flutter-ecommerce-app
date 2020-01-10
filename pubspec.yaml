@@ -50,6 +50,11 @@ flutter:
   - images/Cats/beer.png
   - images/Cats/shakes.png
   - images/Cats/wine.png
+  - images/Cats/cocktail.png
+  - images/Cats/energy.png
+  - images/Cats/soft.png
+  - images/Cats/vodka.png
+  - images/Cats/coffee.png
   - images/Products/cherry-vanilla.jpg
   - images/Products/tilia.jpg
   - images/Products/tusker.jpg
