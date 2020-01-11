@@ -6,6 +6,7 @@ import 'package:flutter/services.dart';
 //My Own Imports
 import 'package:delivery_app/components/horizontal_listview.dart';
 import 'package:delivery_app/components/products.dart';
+import 'package:delivery_app/pages/product_details.dart';
 
 void main() {
 
@@ -154,18 +155,18 @@ class _HomepageState extends State<Homepage> {
           image_carousel,
           //Padding
           new Padding(
-            padding: const EdgeInsets.all(16.0),
+            padding: const EdgeInsets.all(12.0),
             child: new Text('Categories'),
           ),
           //Horizontal List view Begins Here
           HorizontaList(),
 
           //Padding
-          new Padding(padding: const EdgeInsets.all(20.0),
+          new Padding(padding: const EdgeInsets.all(10.0),
           child: new Text('Recent Products',),
           ),
           Container(
-            height: 350.0,
+            height: 320.0,
             child: Products(),
           ),
         ],
